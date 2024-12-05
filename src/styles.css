@@ -1,0 +1,17 @@
+body {
+    background-color: blanchedalmond;
+    
+}
+
+.movie-card {
+    border: 1px solid slategray;
+    border-radius: 5px;
+    padding: 10px;
+    background: white;
+}
+
+.movie-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
