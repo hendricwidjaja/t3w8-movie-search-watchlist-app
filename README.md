@@ -17,3 +17,6 @@ Phase 2 (Thursday):
 - Watchlist feature (save movies to local storage or context).
 - Watchlist page
 - Implement "Delete from Watchlist" functionality.
+
+Phase 3 (Saturday):
+- Having a proper Navbar

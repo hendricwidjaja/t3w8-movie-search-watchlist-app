@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import MovieCard from "../components/MovieCard";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const [query, setQuery] = useState('');
