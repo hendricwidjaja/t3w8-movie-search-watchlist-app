@@ -1,12 +1,15 @@
 import React from "react";
 import { useWatchlist } from "../context/WatchlistContext";
+import { useNavigate } from "react-router-dom";
 
 const Watchlist = () => {
     // Fetch two out of three returns from the custom hook
     const { watchlist, removeFromWatchlist } = useWatchlist();
+    const navigate = useNavigate();
 
     return (
         <div>
+            <button className='btn btn-secondary mb-3' onClick={() => navigate(-1)}>Go Back</button>
             <h2>Your Watchlist</h2>
             {console.log(watchlist)}
             {watchlist.length === 0 ? (
@@ -19,7 +22,7 @@ const Watchlist = () => {
                             <img src={movie.Poster} alt={`${movie.Title} Poster`} />
                             <button
                                 onClick={() => removeFromWatchlist(movie.imdbID)}
-                                style={{color: 'red'}}
+                                style={{ color: 'red' }}
                             >
                                 Remove
                             </button>
