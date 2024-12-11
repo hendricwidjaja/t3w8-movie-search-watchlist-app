@@ -9,8 +9,9 @@ export default function Details() {
 
     useEffect(() => {
         const fecthMovieDetails = async () => {
+            apikey = import.meta.env.VITE_API_KEY
             try {
-                const response = await fetch(`http://www.omdbapi.com/?apikey=d20444e&i=${id}`);
+                const response = await fetch(`http://www.omdbapi.com/?apikey=${apikey}&i=${id}`);
                 const data = await response.json();
     
                 if (data.Response === 'True') {

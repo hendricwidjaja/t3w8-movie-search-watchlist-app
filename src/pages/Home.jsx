@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
 import MovieCard from "../components/MovieCard";
-import { Link } from "react-router-dom";
 
 export default function Home() {
     const [query, setQuery] = useState('');
@@ -15,7 +14,7 @@ export default function Home() {
         if (query) {
             const response = await axios.get(`http://www.omdbapi.com/`, {
                 params: {
-                    apikey: 'd20444e',
+                    apikey: import.meta.env.VITE_API_KEY,
                     s: query
                 }
             });
