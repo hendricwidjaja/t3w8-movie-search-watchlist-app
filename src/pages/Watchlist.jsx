@@ -8,7 +8,7 @@ const Watchlist = () => {
     const navigate = useNavigate();
 
     return (
-        <div style={{ maxWidth: '18rem' }}>
+        <div style={{ maxWidth: '20rem' }}>
             <button className='btn btn-secondary mb-3' onClick={() => navigate(-1)}>Go Back</button>
             <h2>Your Watchlist</h2>
             {watchlist.length === 0 ? (
@@ -18,7 +18,7 @@ const Watchlist = () => {
                     {watchlist.map((movie) => (
                         <li key={movie.imdbID}>
                             <p><strong>{movie.Title}</strong> ({movie.Year})</p>
-                            <img src={movie.Poster} alt={`${movie.Title} Poster`} className='card-img-top' />
+                            <img src={movie.Poster} alt={`${movie.Title} Poster`} className='card-img-top' style={{width: '300px'}}/>
                             <button
                                 onClick={() => removeFromWatchlist(movie.imdbID)}
                                 style={{ color: 'red' }}
