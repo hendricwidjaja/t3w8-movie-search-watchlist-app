@@ -11,7 +11,7 @@ export default function Details() {
         const fecthMovieDetails = async () => {
             const apikey = import.meta.env.VITE_API_KEY
             try {
-                const response = await fetch(`http://www.omdbapi.com/?apikey=${apikey}&i=${id}&plot=full`);
+                const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&i=${id}&plot=full`);
                 const data = await response.json();
     
                 if (data.Response === 'True') {
