@@ -26,7 +26,7 @@ export default function Home() {
     return (
         <div className="container my-4">
 
-            <h1 className="text-center mb-4">Movie Search{import.meta.env.VITE_test}</h1>
+            <h1 className="text-center mb-4">Movie Search</h1>
             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     <input
