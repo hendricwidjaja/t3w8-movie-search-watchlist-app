@@ -12,7 +12,7 @@ export default function Home() {
 
         // Using axios()
         if (query) {
-            const response = await axios.get(`http://www.omdbapi.com/`, {
+            const response = await axios.get(`https://www.omdbapi.com/`, {
                 params: {
                     apikey: import.meta.env.VITE_API_KEY,
                     s: query
