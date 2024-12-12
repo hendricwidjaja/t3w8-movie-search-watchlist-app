@@ -12,7 +12,7 @@ export default function Home() {
 
         // Using axios()
         if (query) {
-            const response = await axios.get(`http://www.omdbapi.com/`, {
+            const response = await axios.get(`https://www.omdbapi.com/`, {
                 params: {
                     apikey: import.meta.env.VITE_API_KEY,
                     s: query
@@ -26,7 +26,7 @@ export default function Home() {
     return (
         <div className="container my-4">
 
-            <h1 className="text-center mb-4">Movie Search</h1>
+            <h1 className="text-center mb-4">Movie Search{import.meta.env.VITE_test}</h1>
             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     <input
